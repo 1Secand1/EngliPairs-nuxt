@@ -1,6 +1,7 @@
 <template>
   <div>
     <p>Home</p>
+    <v-btn>text</v-btn>
   </div>
 </template>
 
