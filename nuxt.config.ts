@@ -1,11 +1,21 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['vuetify-nuxt-module', '@nuxtjs/eslint-module'],
+  modules: [
+    'vuetify-nuxt-module',
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/stylelint-module',
+  ],
   eslint: {
     extensions: ['.js', '.vue'],
     lintOnStart: true,
     fix: true,
+  },
+  stylelint: {
+    files: ['**/*.{vue,css,sass,scss,html}'],
+    fix: true,
+    cache: true,
+    configFile: '.stylelintrc',
   },
   vuetify: {
     vuetifyOptions: {
