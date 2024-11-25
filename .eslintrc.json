@@ -24,7 +24,8 @@
   "parserOptions": {
     "ecmaVersion": 2021,
     "parser": "@typescript-eslint/parser",
-    "sourceType": "module"
+    "sourceType": "module",
+    "warnOnUnsupportedTypeScriptVersion": false
   },
   "plugins": [
     "vue",
