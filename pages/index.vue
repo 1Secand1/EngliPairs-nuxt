@@ -1,42 +1,59 @@
 <template>
-  <div>
-    <p>Привет</p>
-    <v-btn>text</v-btn>
+  <div class="wrapper">
+    <v-btn
+      to="/createGame"
+      class="add-button"
+      min-width="200px"
+    >
+      Добавить игру
+    </v-btn>
+
+    <div class="card-wrapper">
+      <v-card
+        v-for="i in 50"
+        :key="i"
+        to="/game"
+        class="card"
+        title="Животные"
+        subtitle="Кол пар - 20"
+      />
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-  const a = 1;
-  console.log(a);
+
 </script>
 
-<style>
-.element {
-  pointer-events: none;
-  user-select: none;
-
-  isolation: isolate;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+<style scoped>
+.wrapper {
   justify-content: center;
 
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  height: 100svh;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
 
-  font-size: 2rem;
-  line-height: 1.5;
-  color: red;
-  text-align: center;
-
-  background-color: hotpink;
-  outline: 1px solid rebeccapurple;
-  caret-color: goldenrod;
 }
 
+.add-button {
+  display: flex;
+  width: 12%;
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+
+  width: 100%;
+  height: min-content;
+  margin-top: 20px;
+}
+
+.card {
+  cursor: pointer;
+  height: 100px;
+}
 </style>
