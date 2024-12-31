@@ -40,8 +40,19 @@
   // const router = useRouter();
 
   const cardsConfig: TMemoryGame.CardsConfig = {
-    paired: [{ text: 'Вафля' }],
-    options: [[{ text: 'Кошка' }, { text: 'Cat' }]],
+    // paired: [{ text: 'Вафля' }],
+    options: [
+      [{ text: 'кровать' }, { text: 'bed'}],
+      [{ text: 'картина' }, { text: 'painting'}],
+      [{ text: 'мороженое' }, { text: 'ice cream' }],
+      [{ text: 'собака' }, { text: 'dog' }],
+      [{ text: 'лиса' }, { text: 'fox' }],
+      [{ text: 'корова' }, { text: 'cow' }],
+      [{ text: 'рыба' }, { text: 'fish' }],
+      [{ text: 'лягушка' }, { text: 'frog' }],
+      [{ text: 'капибара' }, { text: 'capybara' }],
+      [{ text: 'Кошка' }, { text: 'Cat' }],
+    ],
   };
 
   const playersConfig: TMemoryGame.PlayersConfigItem[] = [
@@ -95,6 +106,6 @@
   gap: 10px;
   justify-content: center;
 
-  max-width: 300px;
+  max-width: 600px;
 }
 </style>
